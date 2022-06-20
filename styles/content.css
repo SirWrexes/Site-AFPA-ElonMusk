@@ -1,0 +1,72 @@
+/*
+ * content.css
+ * Copyright (C) 2022 Ludovic Fernandez
+ *
+ * Distributed under terms of the MIT license.
+ */
+
+#content {
+  position: relative;
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  color: whitesmoke;
+  background-color: dimgrey;
+}
+
+#content section {
+  /*margin: 1% 5%;*/
+  /*border: 3px solid grey;*/
+  font-size: 1.2rem;
+}
+
+#content section img {
+  width: auto;
+  max-width: 50%;
+  height: auto;
+}
+
+#content section:not(:last-child),
+#content section:not(img) {
+  margin-bottom: 4rem;
+}
+
+#content section .section-content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#content section .section-content img:not(:first-child) {
+  justify-self: flex-start;
+}
+
+#content section .section-text {
+  margin: 2rem;
+  align-self: center;
+  max-width: 66%;
+  max-height: 50vw;
+}
+
+#content section .section-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: SpaceX;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 650px) {
+  #content *,
+  #content section .section-title {
+    font-size: 0.8rem;
+  }
+}
