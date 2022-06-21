@@ -64,9 +64,12 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 650px) {
-  #content *,
+@media (max-width: 900px) {
+  #content * {
+    font-size: 2vw;
+  }
+
   #content section .section-title {
-    font-size: 0.8rem;
+    font-size: 4vw;
   }
 }
