@@ -24,7 +24,7 @@
 #content section img {
   width: auto;
   max-width: 50%;
-  height: auto;
+  height: max-content;
 }
 
 #content section .section-content {
