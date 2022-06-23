@@ -7,12 +7,13 @@
 
 #content {
   position: relative;
-  margin-top: 5rem;
+  margin-top: 8.7rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: flex-start;
+  row-gap: 3rem;
   color: whitesmoke;
   background-color: dimgrey;
 }
@@ -31,6 +32,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -39,6 +41,7 @@
   align-self: center;
   max-width: 66%;
   max-height: 50vw;
+  text-align: justify;
 }
 
 #content section .section-title {
