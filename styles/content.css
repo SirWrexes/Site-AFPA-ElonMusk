@@ -27,11 +27,6 @@
   height: auto;
 }
 
-#content section:not(:last-child),
-#content section:not(img) {
-  margin-bottom: 4rem;
-}
-
 #content section .section-content {
   display: flex;
   flex-flow: row nowrap;
