@@ -17,6 +17,14 @@
   justify-content: space-between;
   align-items: baseline;
   background-color: whitesmoke;
+  background: linear-gradient(
+    to bottom,
+    whitesmoke,
+    100%,
+    whitesmoke,
+    90%,
+    transparent
+  );
 }
 
 #nav * {
@@ -60,8 +68,7 @@
 }
 
 #sandwich {
-  /*display: none;*/
-  z-index: 3;
+  display: none;
 }
 
 @media (max-width: 900px) {
