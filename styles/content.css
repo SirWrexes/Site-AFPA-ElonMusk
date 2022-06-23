@@ -41,10 +41,6 @@
   overflow: hidden;
 }
 
-#content section .section-content img:not(:first-child) {
-  justify-self: flex-start;
-}
-
 #content section .section-text {
   margin: 2rem;
   align-self: center;
