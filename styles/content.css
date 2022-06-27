@@ -13,7 +13,7 @@
   flex-direction: column;
   align-content: center;
   justify-content: flex-start;
-  row-gap: 5vw;
+  row-gap: min(5vw, 1rem);
   color: whitesmoke;
   background-color: dimgrey;
 }
@@ -30,21 +30,21 @@
   overflow: hidden;
 }
 
-#content section img.section-img {
+div.section-content > img.section-img {
   width: auto;
   max-width: 50%;
   height: max-content;
 }
 
-#content section div.section-text {
-  margin: 1rem;
+div.section-content > div.section-text {
+  margin: 5vw;
   align-self: center;
   max-width: 66%;
   max-height: 50vw;
   text-align: justify;
 }
 
-#content section p.section-title {
+div.section-text > p.section-title {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -57,11 +57,11 @@
 }
 
 @media (max-width: 900px) {
-  #content * {
-    font-size: 2vw;
+  div.section-content > div.section-text {
+    font-size: 2.5vw;
   }
 
-  #content section p.section-title {
+  div.section-text > p.section-title {
     font-size: 4vw;
     margin: 1.7vw 0;
   }
