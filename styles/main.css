@@ -16,6 +16,12 @@
   --transform-bounce: cubic-bezier(0.42, 0, 0.4, 2.42);
 }
 
+@media (max-width: 950px) {
+  :root {
+    --header-height: 10vw;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

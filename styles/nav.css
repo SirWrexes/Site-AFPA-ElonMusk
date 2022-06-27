@@ -65,7 +65,7 @@
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   #nav {
     align-items: center;
   }
@@ -107,6 +107,11 @@
 @media (max-width: 600px) {
   #nav .nav-invite {
     display: none;
+  }
+
+  #nav-title,
+  #nav label p {
+    font-size: 8vw;
   }
 
   #nav-links .nav-invite {

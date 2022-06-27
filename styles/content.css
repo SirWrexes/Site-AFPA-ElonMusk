@@ -7,28 +7,22 @@
 
 #content {
   position: relative;
-  margin-top: 8.7rem;
+  margin-top: calc(var(--header-height) + 3.7rem);
   width: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: flex-start;
-  row-gap: 3rem;
+  row-gap: 5vw;
   color: whitesmoke;
   background-color: dimgrey;
 }
 
-#content section {
+#content > section {
   font-size: 1.2rem;
 }
 
-#content section img {
-  width: auto;
-  max-width: 50%;
-  height: max-content;
-}
-
-#content section .section-content {
+#content section > div.section-content {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -36,15 +30,21 @@
   overflow: hidden;
 }
 
-#content section .section-text {
-  margin: 2rem;
+#content section img.section-img {
+  width: auto;
+  max-width: 50%;
+  height: max-content;
+}
+
+#content section div.section-text {
+  margin: 1rem;
   align-self: center;
   max-width: 66%;
   max-height: 50vw;
   text-align: justify;
 }
 
-#content section .section-title {
+#content section p.section-title {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -61,7 +61,8 @@
     font-size: 2vw;
   }
 
-  #content section .section-title {
+  #content section p.section-title {
     font-size: 4vw;
+    margin: 1.7vw 0;
   }
 }
