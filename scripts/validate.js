@@ -10,18 +10,18 @@
 const RE = {
   /**
    * - Doesn't start with a hypen
-   * - Only alphabetic characters and hypens
+   * - Only alphabetic characters, spaces, hypens and underscores
    * - At least 2 characters
    * - At most 20 characters
    * - Case insensitive
    */
-  name: new RegExp(/^[^-]([a-z]|-){2,20}/, 'i'),
+  name: new RegExp(/^(?!-)[a-z \-_]{2,20}/, 'i'),
 
   /**
    * - Doesn't start with an @
    * - Has only one '@' symbol (not RCF compliant)
    * - At least one character on each side of the single '@'
-   * - Case insensitive
+   * - Case insensitive (not RCF compliant but nobody cares about this one)
    * - Any further validation should be done by simply sending a mail to the given address
    */
   mail: new RegExp(/^[^@]+@[^@]+\./, 'i'),

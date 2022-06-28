@@ -1,0 +1,22 @@
+/*
+ * modal.css
+ * Copyright (C) 2022 Ludovic Fernandez
+ *
+ * Distributed under terms of the MIT license.
+ */
+
+:root {
+  --modal-width: max(20vw, 15rem);
+  --modal-left: calc(100vw / 2 - var(--modal-width) / 2);
+}
+
+div.modal {
+  position: fixed;
+  top: 25vh;
+  left: var(--modal-left);
+  height: 20vh;
+  width: var(--modal-width);
+  /*min-width: 15rem;*/
+  background: red;
+  color: black;
+}

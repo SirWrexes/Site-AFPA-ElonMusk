@@ -19,7 +19,7 @@
 }
 
 #content > section {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 #content section > div.section-content {
@@ -32,12 +32,12 @@
 
 div.section-content > img.section-img {
   width: auto;
-  max-width: 50%;
-  height: max-content;
+  max-width: 50vw;
+  /*height: max-content;*/
 }
 
 div.section-content > div.section-text {
-  margin: 5vw;
+  margin: min(5vw, 2rem);
   align-self: center;
   max-width: 66%;
   max-height: 50vw;
