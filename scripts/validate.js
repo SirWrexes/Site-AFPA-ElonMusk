@@ -15,7 +15,7 @@ const RE = {
    * - At most 20 characters
    * - Case insensitive
    */
-  name: new RegExp(/^(?!-)[a-z \-_]{2,20}/, 'i'),
+  name: new RegExp(/^(?!-)(\w|[ _\-])/, 'i'),
 
   /**
    * - Doesn't start with an @

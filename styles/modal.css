@@ -6,17 +6,74 @@
  */
 
 :root {
-  --modal-width: max(20vw, 15rem);
+  --modal-width: max(18vw, 18em);
   --modal-left: calc(100vw / 2 - var(--modal-width) / 2);
+  --modal-top: max(20vh, 7.5em);
 }
 
-div.modal {
+dialog {
   position: fixed;
-  top: 25vh;
+  top: var(--modal-top);
   left: var(--modal-left);
-  height: 20vh;
   width: var(--modal-width);
   /*min-width: 15rem;*/
-  background: red;
+  background: transparent;
+  border: none;
   color: black;
+}
+
+dialog label,
+dialog input {
+  display: block; /* Force label rendering on top of input */
+}
+
+dialog fieldset,
+dialog legend {
+  margin: 0.3rem 0.5rem;
+  background: dimgrey;
+}
+
+dialog fieldset {
+  border: 2px solid whitesmoke;
+}
+
+fieldset div {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+dialog legend {
+  border: 2px solid whitesmoke;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.5rem;
+}
+
+dialog label {
+  margin: 0.6rem 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+dialog input {
+  color: black;
+  background-color: whitesmoke;
+  margin: 1rem 0.8rem 1.5rem;
+  padding: 0.2rem 0.3rem;
+  border: 2px solid grey;
+  border-style: inset;
+}
+
+/*dialog input:last-of-type {*/
+/*margin-bottom: 0.8rem;*/
+/*}*/
+
+dialog input:not(:focus):invalid {
+  background-color: whitesmoke;
+}
+
+dialog input:invalid {
+  background-color: #f5cccc;
+}
+
+dialog input:valid {
+  background-color: #ccf5cc;
 }

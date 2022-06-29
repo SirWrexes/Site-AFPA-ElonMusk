@@ -110,23 +110,23 @@
         </section>
     </div>
 
-    <div class="modal">
+    <dialog open="yes">
         <form name="form-sub">
             <fieldset>
-                <legend>Subscribe to our newlsletter</legend>
+                <legend>Newletter subscription</legend>
                 <div>
-                    <label for="form-sub-name">Name</label>
-                    <input id="form-sub-name" type="text" required>
+                    <label for="news-name">Name</label>
+                    <input id="news-name" type="text" minlength="2" maxlength="24" pattern="(?!-|\s)(\w|[ _\-])+[^ ]" required>
                 </div>
                 <div>
-                    <label for="form-sub-mail">Mail address</label>
-                    <input id="form-sub-mail" type="email" required>
+                    <label for="news-email">Mail address</label>
+                    <input id="news-email" type="email" pattern="[^@]+@[^@]+" required>
                 </div>
                 <div>
                 </div>
             </fieldset>
         </form>
-    </div>
+    </dialog>
 </body>
 
 <!--
