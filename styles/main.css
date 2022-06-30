@@ -4,7 +4,7 @@
 @font-face {
   /* Source: https://befonts.com/spacex-font.html */
   font-family: SpaceX;
-  src: url(./fonts/SpaceX.ttf);
+  src: url(../fonts/SpaceX.ttf);
 }
 
 :root {
