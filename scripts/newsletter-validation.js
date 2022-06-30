@@ -15,7 +15,7 @@ const RE = {
    * - At most 20 characters
    * - Case insensitive
    */
-  name: new RegExp(/^(?!-)(\w|[ _\-])/, 'i'),
+  name: new RegExp(/^(?![\- ])(\w+[\- ]?)+[^\- ]/, 'i'),
 
   /**
    * - Doesn't start with an @
@@ -36,19 +36,3 @@ const RE = {
    */
   pass: /^(?=.*\w)(?=.*\d)(?=.*\W).{8,70}$/,
 };
-
-/** @typedef {keyof RE} ExpressionType */
-
-module.exports =
-  /**
-   * A validator that returns true if the string passed as its argument matches a given RegEx
-   *
-   * @template {ExpressionType} E
-   * @param {string} str - Data to validate
-   * @param {E} type - Case insensitive
-   * @returns {str is E} A boolean value that is true if given data matches rules for given type
-   */
-  function validate(str, type) {
-    if (!type in this) throw new TypeError(`Bad ExpressionType: ${type}`);
-    return this[type.toUpperCase()].test(str);
-  }.bind(Object.freeze(RE));
