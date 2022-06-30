@@ -61,10 +61,6 @@
   color: var(--color-clickables);
 }
 
-#sandwich {
-  display: none;
-}
-
 @media (max-width: 950px) {
   #nav {
     align-items: center;

@@ -66,6 +66,10 @@ footer {
   background-color: whitesmoke;
 }
 
+.undisplay {
+  display: none;
+}
+
 .clickable-bouncy {
   transition-property: transform;
   transition-timing-function: var(--transform-bounce);
