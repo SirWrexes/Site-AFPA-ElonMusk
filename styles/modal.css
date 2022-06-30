@@ -6,9 +6,9 @@
  */
 
 :root {
-  --modal-width: max(18vw, 18em);
+  --modal-width: 18em;
   --modal-left: calc(100vw / 2 - var(--modal-width) / 2);
-  --modal-top: max(20vh, 7.5em);
+  --modal-top: min(20vh, 7.5em);
 }
 
 dialog {
@@ -74,6 +74,6 @@ dialog input:invalid {
   background-color: #f5cccc;
 }
 
-dialog input:valid {
+dialog input:valid:not(:last-child) {
   background-color: #ccf5cc;
 }
