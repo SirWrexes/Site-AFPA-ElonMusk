@@ -6,9 +6,9 @@
  */
 
 :root {
-  --modal-width: 18em;
+  --modal-width: min(20rem, 75vw);
   --modal-left: calc(100vw / 2 - var(--modal-width) / 2);
-  --modal-top: min(20vh, 7.5em);
+  --modal-top: max(20vh, 7em);
 }
 
 dialog {
@@ -16,56 +16,49 @@ dialog {
   top: var(--modal-top);
   left: var(--modal-left);
   width: var(--modal-width);
-  /*min-width: 15rem;*/
+  max-width: 80vw;
   background: transparent;
   border: none;
-  color: black;
 }
 
-dialog label,
-dialog input {
-  display: block; /* Force label rendering on top of input */
-}
-
-dialog fieldset,
-dialog legend {
-  margin: 0.3rem 0.5rem;
-  background: dimgrey;
-}
-
+dialog legend,
 dialog fieldset {
-  border: 2px solid whitesmoke;
-}
-
-fieldset div {
-  display: flex;
-  flex-flow: column nowrap;
+  background: dimgrey;
 }
 
 dialog legend {
   border: 2px solid whitesmoke;
   font-size: 1.4rem;
   padding: 0.3rem 0.5rem;
+  justify-self: center;
+  text-align: center;
 }
 
-dialog label {
-  margin: 0.6rem 0.5rem 0;
-  font-size: 1.2rem;
+dialog fieldset {
+  border: 2px solid whitesmoke;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: center;
+  column-gap: 3vw;
 }
 
 dialog input {
   color: black;
   background-color: whitesmoke;
-  margin: 1rem 0.8rem 1.5rem;
-  padding: 0.2rem 0.3rem;
+  margin: 0rem 1rem 1rem;
   border: 2px solid grey;
   border-style: inset;
+  padding: 0.2rem 0.3rem;
+  text-align: center;
 }
 
-/*dialog input:last-of-type {*/
-/*margin-bottom: 0.8rem;*/
-/*}*/
+dialog input:first-of-type {
+  margin-top: min(1.2rem, 4vw);
+}
 
+dialog input:not(:focus):valid,
 dialog input:not(:focus):invalid {
   background-color: whitesmoke;
 }
@@ -74,6 +67,20 @@ dialog input:invalid {
   background-color: #f5cccc;
 }
 
-dialog input:valid:not(:last-child) {
+dialog input:valid {
   background-color: #ccf5cc;
+}
+
+dialog input[type='submit'] {
+  align-self: center;
+}
+
+@media screen and (max-width: 960px) {
+  dialog legend {
+    font-size: 2.9vw;
+  }
+
+  dialog input {
+    font-size: 2.2vw;
+  }
 }

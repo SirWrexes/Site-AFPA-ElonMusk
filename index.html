@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="styles/content.css" />
     <link rel="stylesheet" type="text/css" href="styles/modal.css" />
     <!--<link rel="stylesheet" type="text/css" href="styles/footer.css" />-->
-    <script type="text/javascript" src="/scripts/validate.js"></script>
+    <script type="text/javascript" src="./scripts/newsletter-validation.js"></script>
 </head>
 
 <header id="nav">
@@ -20,18 +20,20 @@
         <a href="#">About me</a>
         <a href="#">Functions</a>
         <a href="#">Games</a>
-        <a href="#">Newsletter</a>
-        <button class="nav-invite clickable-bouncy"><a href="#">Invite me</a></button>
+        <label for="news-form">
+            <a href="#">Newsletter</a>
+        </label>
+        <button class="nav-invite clickable-bouncy">
+            <a href="#">Invite me</a>
+        </button>
     </div>
 
-    <button class="nav-invite clickable-bouncy"><a href="#">Invite me</a></button>
+    <button class="nav-invite clickable-bouncy">
+        <a href="#">Invite me</a>
+    </button>
     <label for="sandwich" class="clickable-bouncy">
         <p id="sandwich-open">≡</p>
         <p id="sandwich-close">≢</p>
-    </label>
-    <label for="news-form" class="clickable-bouncy">
-        <p id="news-form-open">≡</p>
-        <p id="news-form-close">≢</p>
     </label>
 </header>
 
@@ -118,17 +120,10 @@
     <dialog open="yes">
         <form name="form-sub">
             <fieldset>
-                <legend>Newletter subscription</legend>
-                <div>
-                    <label for="news-name">Name</label>
-                    <input id="news-name" type="text" minlength="2" maxlength="24" placeholder="John Doe" required>
-                </div>
-                <div>
-                    <label for="news-email">Mail address</label>
-                    <input id="news-email" type="email" minlength="3" placeholder="john@doe.net" required>
-                </div>
-                <div>
-                </div>
+                <legend>Newsletter subscription</legend>
+                <input id="news-name" type="text" minlength="2" maxlength="24" placeholder="Name or Nickname" required>
+                <input id="news-email" type="email" minlength="3" placeholder="Email Address" required>
+                <input type="submit">
             </fieldset>
         </form>
     </dialog>
